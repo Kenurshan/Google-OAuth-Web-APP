@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>SSA 2</title>
+  <link href='https://fonts.googleapis.com/css?family=ABeeZee' rel='stylesheet'>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+	<style>
+		body {
+			background-image: url('3.jpg');
+			font-family: 'ABeeZee';
+			}	 
+	</style>
+</head>
+
+<body>
+	<div class="header">
+  		<h4>Software Security Assignment 2</h4> 
+  	</div>
+
+  	<a id="link">
+  		<button class="b1">Login with Google</button>
+  	</a>
+  		
+	<div id="user-info-wrapper">
+   		<img class="profile"/>
+        
+    		<p class="p1" ></p>
+   		<p></p>
+    		<p></p>
+    		<p></p>
+    		<p></p>
+    	</div>
+        
+	<script type="text/javascript">
+		//Extract all user information from response and print on web app
+   		const urlpara = new URLSearchParams(window.location.search)
+    		if (urlpara.get('id')) {
+		      document.querySelector('#link').style.display = 'none'
+		      document.querySelector('img').src = urlpara.get('picture')
+		      document.querySelectorAll('p')[0].innerHTML = `Hello, &nbsp; ${urlpara.get('given_name')}...!`
+		      document.querySelectorAll('p')[1].innerHTML = `Full Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp; ${urlpara.get('name')}`
+		      document.querySelectorAll('p')[2].innerHTML = `Family Name &nbsp;&nbsp;&nbsp;&nbsp; : &nbsp;&nbsp; ${urlpara.get('family_name')}`
+		      document.querySelectorAll('p')[3].innerHTML = `Email Address &nbsp;&nbsp;&nbsp;:&nbsp;&nbsp; ${urlpara.get('email')}`
+		      document.querySelectorAll('p')[4].innerHTML = `Language Code &nbsp;:&nbsp;&nbsp; ${urlpara.get('locale')}`
+      		} else {
+      		      document.querySelector('#user-info-wrapper').style.display = 'none'
+   		       }
+   		       
+		//request to user login with our client id and scopes
+    		async function getCId() {
+    			//Set the redirect uri same as Google API console
+      			const rrUri = 'http://localhost:3000/oauth2callback'
+      
+      			//Set scopes for user's profile, email and information
+      			const scopes = 'profile email openid' 
+      
+      			const resType = 'code'
+
+      			const response = await fetch('cId')
+      			const json = await response.json()
+      			//When user click the button, bellow request send to the google login page, that refering our client id & resource permisions to user authentification
+      			document.querySelector('#link').href = `https://accounts.google.com/o/oauth2/v2/auth?client_id=${json.cId}&redirect_uri=${rrUri}&scope=${scopes}&response_type=${resType}&access_type=offline&include_granTted_scopes=true`
+    			}
+    			getCId()
+    	</script>
+</body>
+</html>
