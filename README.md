@@ -6,7 +6,7 @@
 
 Github link - //////////////--------
 1. Downnload or clone the file
-	- 'git clone _////////////____________`
+	- 'git clone https://github.com/Kenurshan/Google-OAuth-Web-APP.git`
 2. Run below commands on terminal
 	- 'npm install'
 	- 'node server.js {CLIENT_ID} {CLIENT_SECRET}'
