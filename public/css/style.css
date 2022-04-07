@@ -1,0 +1,42 @@
+/* Set style for button */
+      .b1   {
+  	background-color: black;
+  	color: white;
+  	padding: 14px 20px;
+  	margin: 8px 0;
+ 	border: none;
+ 	cursor: pointer;
+  	width: 50%;
+ 	position: absolute;
+  	top: 50%;
+  	left: 50%;
+  	transform: translate(-50%, -50%);
+  	opacity: 0.8;
+	}
+
+
+/* Profile Pic styles */  /*  */
+     .profile {
+  	display: block;
+ 	margin-left: auto;
+ 	margin-right: auto;
+  	width: 25%;
+  	border-radius: 50%;
+  	}
+  	
+/* paragrapgh styles */
+     .p1{
+	text-align: center;
+	color: navy;
+	text-transform: uppercase;
+	}
+
+     
+	
+/* Header style */
+     .header {
+ 	padding: 1px;
+  	text-align: left;
+ 	background: #1abc9c;
+ 	color: white;
+  	}
