@@ -1,8 +1,8 @@
 # Software Security Assignment 2
 
 * Team Members
-	-Ms21932120 - Kenurshan.S
-	-Ms21928710 - Rizmi M.R.M 
+	- Ms21932120 - Kenurshan.S
+	- Ms21928710 - Rizmi M.R.M 
 
 Github link - https://github.com/Kenurshan/Google-OAuth-Web-APP.git
 1. Downnload or clone the file
