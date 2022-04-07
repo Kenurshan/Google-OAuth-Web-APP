@@ -4,7 +4,7 @@
 	-Ms21932120 - Kenurshan.S
 	-Ms21928710 - Rizmi M.R.M 
 
-Github link - //////////////--------
+Github link - https://github.com/Kenurshan/Google-OAuth-Web-APP.git
 1. Downnload or clone the file
 	- 'git clone https://github.com/Kenurshan/Google-OAuth-Web-APP.git`
 2. Run below commands on terminal
