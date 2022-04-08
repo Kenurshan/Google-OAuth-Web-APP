@@ -60,8 +60,7 @@
       			const response = await fetch('cId')
       			const json = await response.json()
       			//When user click the button, bellow request send to the google login page, that refering our client id & resource permisions to user authentification
-      			document.querySelector('#link').href = `https://accounts.google.com/o/oauth2/v2/auth?client_id=${json.cId}&redirect_uri=${rrUri}&scope=${scopes}
-			&response_type=${resType}&access_type=offline&include_granTted_scopes=true`
+      			document.querySelector('#link').href = `https://accounts.google.com/o/oauth2/v2/auth?client_id=${json.cId}&redirect_uri=${rrUri}&scope=${scopes}&response_type=${resType}&access_type=offline&include_granTted_scopes=true`
     			}
     			getCId()
     	</script>
